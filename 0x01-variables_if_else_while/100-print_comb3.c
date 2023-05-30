@@ -3,8 +3,6 @@
 /**
  * main - main block
  * Description: Write a program that prints all possible
- * different combinations of two digits
- * Numbers must be separated by ,, followed by a space
  * Return: 0
  */
 int main(void)
@@ -21,14 +19,12 @@ int main(void)
 			{
 				putchar('0' + d);
 				putchar('0' + c);
-
 				if (c + d != 17)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-
 			c++;
 		}
 		d++;
