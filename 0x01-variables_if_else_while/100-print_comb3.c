@@ -1,59 +1,37 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * main - Entry point
- * Description - This program prints all digits from 0 to 9
+ * main - main block
+ * Description: Write a program that prints all possible
+ * different combinations of two digits
+ * Numbers must be separated by ,, followed by a space
  * Return: 0
  */
 int main(void)
 {
-	int i = 48;
-	int j = 49;
+	int c;
+	int d = 0;
 
-	for (; i < 57 ; i++)
+	while (d < 10)
 	{
-		if (i == 49)
+		c = 0;
+		while (c < 10)
 		{
-			j = 50;
-		}
-		else if (i == 50)
-		{
-			j = 51;
-		}
-		else if (i == 51)
-		{
-			j = 52;
-		}
-		else if (i == 52)
-		{
-			j = 53;
-		}
-		else if (i == 53)
-		{
-			j = 54;
-		}
-		else if (i == 54)
-		{
-			j = 55;
-		}
-		else if (i == 55)
-		{
-			j = 56;
-		}
-		else if (i == 56)
-		{
-			j = 57;
-		}
-		for (; j < 58 ; j++)
-		{
-			putchar(i);
-			putchar(j);
-			if (i == 56)
+			if (d != c && d < c)
 			{
-				break;
+				putchar('0' + d);
+				putchar('0' + c);
+
+				if (c + d != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			putchar(',');
-			putchar(' ');
+
+			c++;
 		}
+		d++;
 	}
 	putchar('\n');
 	return (0);
