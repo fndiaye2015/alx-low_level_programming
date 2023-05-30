@@ -13,10 +13,10 @@ int main(void)
 		putchar(i);
 		if (i == 57)
 		{
-			continue;
+			break;
 		}
-		putchar(' ');
 		putchar(',');
+		putchar(' ');
 		i++;
 	}
 	putchar('\n');
